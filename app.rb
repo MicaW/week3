@@ -16,7 +16,6 @@ get '/secret/slash' do
 end
 
 get '/cat' do
-  "<div style='border: 10px black solid; width: 456px; height: 275px'>
-    <img src='http://bit.ly/1eze8aE'>
-   </div>"
+  @name = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
 end
