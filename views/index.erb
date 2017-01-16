@@ -1,4 +1,12 @@
 <h1>My name is <%= @name %></h1>
-<div style='border: 10px black solid; width: 456px; height: 275px'>
-  <img src='http://bit.ly/1eze8aE'>
+<h2>My age is  <%= @age %></h2>
+<div style='border: 10px black solid; width: 456px; height: 275px;'>
+  <img src='http://bit.ly/1eze8aE' />
  </div>
+ <% if !@name %>
+ <form action='/named-cat' style="margin-top: 20px;">
+   Name <input type='text' name='name' /><br />
+   Age <input type='text' name='age'  style="margin-top: 20px;"/>
+   <input type='submit' value='Submit' />
+ </form>
+ <% end %>
